@@ -1,0 +1,7 @@
+{
+  "name": "kolibri-plugin-template",
+  "description": "Template for building external Kolibri plugin",
+  "private": true,
+  "dependencies": {
+  }
+}
