@@ -1,6 +1,6 @@
 
-Kolibri UI Tracking for Design Effectiveness Analysis
-=====================================================
+Kolibri External Plugin Template
+=================================
 
 What is Kolibri?
 ----------------
@@ -21,9 +21,17 @@ devices at a school.
 See https://learningequality.org/kolibri/ for more info.
 
 
-How can I use it?
------------------
+How can I install external plugin in Kolibri?
+-----------------------------------------------
 
+Run the following commands in Kolibri to install this plugin:
+
+`pip install -e <LOCAL_PATH_TO_THIS_PLUGIN_FOLDER>`
+
+
+`kolibri plugin plugin_template enable`
+
+If the plugin includes any libraries in package.json, run `npm install` in Kolibri
 
 
 
