@@ -26,12 +26,12 @@ How can I install external plugin in Kolibri?
 
 Run the following commands in Kolibri to install this plugin:
 
-`pip install -e <LOCAL_PATH_TO_THIS_PLUGIN_FOLDER>`
+```pip install -e <LOCAL_PATH_TO_THIS_PLUGIN_FOLDER>```
 
 
-`kolibri plugin plugin_template enable`
+```kolibri plugin plugin_template enable```
 
-If the plugin includes any libraries in package.json, run `npm install` in Kolibri
+If the plugin includes any libraries in package.json, run ```npm install``` in Kolibri
 
 
 
