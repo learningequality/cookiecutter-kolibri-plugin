@@ -2,6 +2,20 @@
 Kolibri External Plugin Template
 =================================
 
+
+How can I install external plugin in Kolibri?
+-----------------------------------------------
+
+Run the following commands in Kolibri to install this plugin:
+
+``pip install -e <LOCAL_PATH_TO_THIS_PLUGIN_FOLDER>``
+
+
+``kolibri plugin plugin_template enable``
+
+If the plugin includes any libraries in package.json, run ``npm install`` in Kolibri
+
+
 What is Kolibri?
 ----------------
 
@@ -19,20 +33,6 @@ thus a Kolibri learner can use his or her credentials on any linked Kolibri inst
 devices at a school.
 
 See https://learningequality.org/kolibri/ for more info.
-
-
-How can I install external plugin in Kolibri?
------------------------------------------------
-
-Run the following commands in Kolibri to install this plugin:
-
-```pip install -e <LOCAL_PATH_TO_THIS_PLUGIN_FOLDER>```
-
-
-```kolibri plugin plugin_template enable```
-
-If the plugin includes any libraries in package.json, run ```npm install``` in Kolibri
-
 
 
 How can I contribute?
