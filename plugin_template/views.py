@@ -1,5 +1,6 @@
 from __future__ import absolute_import, print_function, unicode_literals
-from django.http import HttpResponse
+from django.views.generic.base import TemplateView
 
-def PluginTemplateView(request):
-    return HttpResponse(status=204)
+
+class PluginTemplateView(TemplateView):
+    template_name = "plugin_template/plugin_template.html"

@@ -1,18 +1,24 @@
+const Vue = require('vue');
 const KolibriModule = require('kolibri_module');
 
 class PluginTemplateModule extends KolibriModule {
   /*
-  inherited callback when this module is initialized.
-  */
+   Inherited callback when this module is initialized.
+   */
   initialize() {
-    console.log('this module is initialized');
+    console.log('Module is initialized.');
   }
 
   /*
-  inherited callback when this module is loaded.
-  */
+   Inherited callback when this module is loaded.
+   */
   ready() {
-    console.log('this module is ready');
+    this.vm = new Vue({
+      el: 'body',
+      components: {
+        rootvue: require('./vue'),
+      },
+    });
   }
 }
 

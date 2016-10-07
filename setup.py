@@ -16,6 +16,7 @@ def read_file(fname):
         return open(fname).read().decode("utf-8")
     return open(fname).read()
 
+
 dist_name = 'kolibri-plugin-template'
 plugin_name = 'plugin_template'
 
@@ -30,6 +31,7 @@ The full documentation is at."""
 description = (
     """Template for building external Kolibri plugin"""
 )
+
 
 ######################################
 # STATIC AND DYNAMIC BUILD SPECIFICS #
@@ -47,6 +49,7 @@ def enable_log_to_stdout(logname):
     ch.setFormatter(formatter)
     # add ch to logger
     log.addHandler(ch)
+
 
 setup(
     name=dist_name,
