@@ -17,8 +17,8 @@ def read_file(fname):
     return open(fname).read()
 
 
-dist_name = 'kolibri-plugin-template'
-plugin_name = 'plugin_template'
+dist_name = '{{cookiecutter.plugin_name}}'
+plugin_name = '{{cookiecutter.plugin_name}}'
 
 readme = read_file('README.rst')
 doclink = """

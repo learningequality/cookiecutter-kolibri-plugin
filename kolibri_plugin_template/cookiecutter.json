@@ -1,0 +1,4 @@
+{
+  "plugin_name": "example_plugin",
+  "plugin_class_name": "ExamplePlugin"
+}

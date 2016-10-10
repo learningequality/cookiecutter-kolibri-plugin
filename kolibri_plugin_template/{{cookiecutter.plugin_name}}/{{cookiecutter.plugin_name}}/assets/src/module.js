@@ -1,7 +1,7 @@
 const Vue = require('vue');
 const KolibriModule = require('kolibri_module');
 
-class PluginTemplateModule extends KolibriModule {
+class {{cookiecutter.plugin_class_name}}Module extends KolibriModule {
   /*
    Inherited callback when this module is initialized.
    */
@@ -22,4 +22,4 @@ class PluginTemplateModule extends KolibriModule {
   }
 }
 
-module.exports = new PluginTemplateModule();
+module.exports = new {{cookiecutter.plugin_class_name}}Module();

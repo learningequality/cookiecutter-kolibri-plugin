@@ -11,7 +11,7 @@ Run the following commands in Kolibri to install this plugin:
 ``pip install -e <LOCAL_PATH_TO_THIS_PLUGIN_FOLDER>``
 
 
-``kolibri plugin plugin_template enable``
+``kolibri plugin {{cookiecutter.plugin_name}} enable``
 
 If the plugin includes any libraries in package.json, run ``npm install`` in Kolibri
 

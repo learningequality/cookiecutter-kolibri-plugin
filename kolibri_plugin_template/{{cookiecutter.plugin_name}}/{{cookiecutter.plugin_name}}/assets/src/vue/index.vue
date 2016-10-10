@@ -1,7 +1,7 @@
 <template>
 
   <div>
-    <h1>Plugin Template</h1>
+    <h1>{{cookiecutter.plugin_name}}</h1>
   </div>
 
 </template>

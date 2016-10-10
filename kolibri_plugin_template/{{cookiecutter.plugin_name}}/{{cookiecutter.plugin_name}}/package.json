@@ -1,0 +1,7 @@
+{
+  "name": "{{cookiecutter.plugin_name}}",
+  "description": "{{cookiecutter.plugin_name}}, a plugin for Kolibri.",
+  "private": true,
+  "dependencies": {
+  }
+}
