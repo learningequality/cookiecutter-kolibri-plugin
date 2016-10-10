@@ -31,3 +31,5 @@ Minimal [Cookiecutter](https://github.com/audreyr/cookiecutter) template for gen
 * Enable the plugin on Kolibri.
 
   `$ kolibri plugin <plugin_name> enable`
+
+* Make sure to restart the Kolibri server.
