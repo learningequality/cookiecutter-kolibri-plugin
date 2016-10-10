@@ -9,7 +9,7 @@
 
 * Generate a new Kolibri plugin within the current directory.
 
-  `$ cookiecutter https://github.com/christianmemije/cookiecutter-kolibri-plugin`
+  `$ cookiecutter https://github.com/learningequality/cookiecutter-kolibri-plugin`
 
 
 * Select a plugin name. 
