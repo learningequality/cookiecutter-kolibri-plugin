@@ -22,7 +22,7 @@
   Must be `UpperCamelCase.` (ie. `VectorVideoPlayer`).
 
 
-* Install newly generated plugin in Kolibri.
+* Install the newly generated plugin in Kolibri.
 
   `$ pip install -e <LOCAL_PATH_TO_THE_PLUGIN_DIRECTORY>`
 
