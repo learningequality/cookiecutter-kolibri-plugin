@@ -1,4 +1,5 @@
 # Cookiecutter Kolibri Plugin
+Minimal [Cookiecutter](https://github.com/audreyr/cookiecutter) template for generating [Kolibri](https://github.com/learningequality/kolibri) plugins.
 
 ## Usage
 
