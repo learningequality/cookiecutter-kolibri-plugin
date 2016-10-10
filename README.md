@@ -7,7 +7,7 @@
   `$ pip install cookiecutter`
 
 
-* Generate a new Kolibri plugin within current directory.
+* Generate a new Kolibri plugin within the current directory.
 
   `$ cookiecutter https://github.com/christianmemije/cookiecutter-kolibri-plugin`
 
@@ -22,9 +22,9 @@
   Must be `UpperCamelCase.` (ie. `VectorVideoPlayer`).
 
 
-* Install newly generated plugin on Kolibri.
+* Install newly generated plugin in Kolibri.
 
-  `$ pip install -e <LOCAL_PATH_TO_THIS_PLUGIN_FOLDER>`
+  `$ pip install -e <LOCAL_PATH_TO_THE_PLUGIN_DIRECTORY>`
 
 
 * Enable the plugin on Kolibri.
