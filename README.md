@@ -8,7 +8,7 @@ Minimal [Cookiecutter](https://github.com/audreyr/cookiecutter) template for gen
   `$ pip install cookiecutter`
 
 
-* Generate a new Kolibri plugin within the current directory.
+* Generate a new Kolibri plugin within the directory of your choice.
 
   `$ cookiecutter https://github.com/learningequality/cookiecutter-kolibri-plugin`
 
@@ -26,10 +26,14 @@ Minimal [Cookiecutter](https://github.com/audreyr/cookiecutter) template for gen
 * Install the newly generated plugin in Kolibri.
 
   `$ pip install -e <LOCAL_PATH_TO_THE_PLUGIN_DIRECTORY>`
-
-
+  
+  
 * Enable the plugin on Kolibri.
 
   `$ kolibri plugin <plugin_name> enable`
+  
 
-* Make sure to restart the Kolibri server.
+* Restart the Kolibri server.
+
+
+* You can test the plugin by visiting `http://127.0.0.1:8000/<plugin_name>`
