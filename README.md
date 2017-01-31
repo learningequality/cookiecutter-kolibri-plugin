@@ -19,7 +19,7 @@ Minimal [Cookiecutter](https://github.com/audreyr/cookiecutter) template for gen
   
   e.g. `Vector Video Player`.
 
-* You will then be prompted to enter a description, a repository url, author details, and a license.
+* You will then be prompted to enter a description, a repository url, and author details..
 
 * If you would like to change the default pypi package name, you can modify it. 
   

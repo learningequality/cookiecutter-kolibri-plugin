@@ -4,7 +4,6 @@
   "repository_url": "",
   "author": "Learning Equality",
   "email": "info@learningequality.org",
-  "license": ["MIT", "GNU GPL v3.0", "Apache Software License 2.0", "The Unlicense"],
   "current_year": "{% now 'utc', '%Y' %}",
   "_extensions": ["jinja2_time.TimeExtension"],
   "plugin_name": "kolibri_{{ cookiecutter.readable_plugin_name|lower|replace(' ', '_') }}",
