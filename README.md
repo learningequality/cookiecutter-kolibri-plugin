@@ -7,6 +7,9 @@ Minimal [Cookiecutter](https://github.com/audreyr/cookiecutter) template for gen
 
   `$ pip install cookiecutter`
 
+* Install le-utils.
+
+  `$ pip install le-utils`
 
 * Generate a new Kolibri plugin within the directory of your choice.
 
@@ -26,6 +29,11 @@ Minimal [Cookiecutter](https://github.com/audreyr/cookiecutter) template for gen
   
   Must be `UpperCamelCase.` (ie. `VectorVideoPlayer`).
 
+* Select if this is a frontend plugin (i.e. it will provide a Javascript module for frontend code)
+
+* Select if this plugin will have its own page within the Django app - if you are creating an extension of existing functionality in Kolibri, this will not be the case - such as a content renderer plugin.
+
+* Select if this plugin is a content renderer plugin, and what content kind and file extension it handles. If you are not creating a content renderer plugin, you may safely ignore these options.
 
 * Install the newly generated plugin in Kolibri.
 
@@ -40,4 +48,4 @@ Minimal [Cookiecutter](https://github.com/audreyr/cookiecutter) template for gen
 * Restart the Kolibri server.
 
 
-* You can test the plugin by visiting `http://127.0.0.1:8000/<plugin_name>`
+* If the plugin has its own page, you can test the plugin by visiting `http://127.0.0.1:8000/<plugin_name>`

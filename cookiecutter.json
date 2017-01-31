@@ -9,4 +9,7 @@
   "_extensions": ["jinja2_time.TimeExtension"],
   "plugin_name": "kolibri_{{ cookiecutter.readable_plugin_name|lower|replace(' ', '_') }}",
   "plugin_class_name": "{{ cookiecutter.readable_plugin_name|title|replace(' ', '') }}",
+  "frontend_plugin": ["Yes", "No"],
+  "has_own_page": ["Yes", "No"],
+  "content_renderer_plugin": ["Yes", "No"]
 }
