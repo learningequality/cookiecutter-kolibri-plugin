@@ -20,7 +20,7 @@ This project adheres to `Semantic Versioning <http://semver.org/>`_.
 Added
 ^^^^^
 
- - Base setup of Frontend Plugin.
+ - Base setup of Plugin.
 
 Changed
 ^^^^^^^

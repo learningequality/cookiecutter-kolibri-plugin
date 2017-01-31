@@ -25,16 +25,8 @@ lib64
 # Installer logs
 pip-log.txt
 
-# Unit test / coverage reports
-.coverage
-.tox
-nosetests.xml
-htmlcov/
-kolibrihome_test/
-
 # Translations
 *.mo
-kolibri/locale/
 
 # Mr Developer
 .mr.developer.cfg
@@ -50,23 +42,13 @@ output/*/index.html
 # Sphinx
 docs/_build
 
-# api-docs
-docs/py_modules/kolibri*rst
-docs/py_modules/modules.rst
-docs/kolibri*rst # old location
-docs/modules.rst # old location
-
 # node
 node_modules
 npm-debug.log
 
-# Node coverage data
-coverage
-
 # webpack built files
-kolibri/**/build/*
-kolibri/**/static/*
-js-dist
+**/build/*
+**/static/*
 
 # swap files
 *.swp
@@ -75,15 +57,8 @@ js-dist
 *.sublime-project
 *.sublime-workspace
 
-# Content App
-storage/*
-kolibri/content/content_db/*.sqlite3
-
 # virtual environment
 venv/
-
-# leftover from hack day - want to ensure people don't check these in
-kolibri/plugins/learn/assets/src/demo/
 
 # ignore strange OSX icon files. (Note there are special characters after 'Icon')
 # see http://stackoverflow.com/a/30755378
