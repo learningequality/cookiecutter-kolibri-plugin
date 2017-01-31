@@ -6,11 +6,11 @@ plugin_name = '{{ cookiecutter.plugin_name }}'
 plugin_class_name = '{{ cookiecutter.plugin_class_name }}'
 
 matching_plugin_class_name = plugin_name.split('_')
-matching_plugin_class_name = "".join(x.title() for x in matching_plugin_class_name[:])
+matching_plugin_class_name = "".join(x.title() for x in matching_plugin_class_name[1:])
 
-if not re.match(PLUGIN_REGEX, plugin_name):
+if not plugin_name.startswith('kolibri_') or not re.match(PLUGIN_REGEX, plugin_name):
     print(
-    'ERROR: "{}" is not a valid Kolibri plugin name. A valid Kolibri plugin name must be lowercase_separated_by_underscores (ie. vector_video_player).'.format(
+    'ERROR: "{}" is not a valid Kolibri plugin name. A valid Kolibri plugin name must be prefixed with "kolibri_" and lowercase_separated_by_underscores (ie. kolibri_vector_video_player).'.format(
         plugin_name))
     # exits with status 1 to indicate failure
     sys.exit(1)

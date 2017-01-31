@@ -12,13 +12,17 @@ Minimal [Cookiecutter](https://github.com/audreyr/cookiecutter) template for gen
 
   `$ cookiecutter https://github.com/learningequality/cookiecutter-kolibri-plugin`
 
-
-* Select a plugin name. 
+* Select a readable plugin name. 
   
-  Must be `lowercase_separated_by_underscores` (ie. `vector_video_player`).
+  e.g. `Vector Video Player`.
 
+* You will then be prompted to enter a description, a repository url, author details, and a license.
 
-* Select a plugin Class name. 
+* If you would like to change the default pypi package name, you can modify it. 
+  
+  Must be `kolibri_lowercase_separated_by_underscores` (ie. `kolibri_vector_video_player`).
+
+* If you would like to change the default plugin Class name for the Javascript class, you can modify it. 
   
   Must be `UpperCamelCase.` (ie. `VectorVideoPlayer`).
 

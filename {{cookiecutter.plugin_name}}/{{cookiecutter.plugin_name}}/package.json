@@ -1,6 +1,6 @@
 {
-  "name": "{{cookiecutter.plugin_name}}",
-  "description": "{{cookiecutter.plugin_name}}, a plugin for Kolibri.",
+  "name": "{{cookiecutter.readable_plugin_name}}",
+  "description": "{{cookiecutter.description}}",
   "private": true,
   "dependencies": {
   }

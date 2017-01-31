@@ -13,7 +13,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/learningequality/kolibri-exercise-perseus-plugin/issues.
+Report bugs at {{ cookiecutter.repository_url }}/issues.
 
 If you are reporting a bug, please include:
 
