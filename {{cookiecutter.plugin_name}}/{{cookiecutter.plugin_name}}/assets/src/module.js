@@ -1,11 +1,12 @@
-const RootComponent = require('./vue');
 const logging = require('kolibri.lib.logging').getLogger(__filename);
+
+const RootVue = require('./vue');
 {% if cookiecutter.content_renderer_plugin == 'Yes' %}
 const ContentRendererModule = require('content_renderer_module');
 
 class {{cookiecutter.plugin_class_name}}Module extends ContentRendererModule {
   get rendererComponent() {
-    return RootComponent;
+    return RootVue;
   }
   get contentType() {
     return '{{ '{{ content_kind }}' }}/{{ '{{ file_extension }}' }}';

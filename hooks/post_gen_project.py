@@ -71,3 +71,6 @@ if '{{ cookiecutter.content_renderer_plugin }}' == 'Yes':
     env.loader = FileSystemLoader('/')
     render_file('kolibri_plugin.py', context, env)
     render_file('assets/src/module.js', context, env)
+
+if '{{ cookiecutter.has_own_page }}' == 'Yes' and '{{ cookiecutter.frontend_plugin }}' == 'Yes':
+    shutil.move(location('assets/src/module.js'), location('assets/src/app.js'))

@@ -29,13 +29,13 @@ How can I install this plugin for development?
     ``kolibri plugin {{ cookiecutter.plugin_name }} enable``
 
 {% if is_frontend_plugin %}
-4. Then run the commands to install frontend packages in Kolibri, this plugin will have its recursively installed.
+4. Then run the commands to install frontend packages in Kolibri, this plugin will have its dependencies recursively installed.
 {% endif %}
 
 How to publish to PyPi?
 ------------------------------
 
-1. Follow the instructions above to installing the plugin for development.
+1. Follow the instructions above to install the plugin for development.
 
 {% if is_frontend_plugin %}
 2. From the Kolibri directory run the frontend build command.
