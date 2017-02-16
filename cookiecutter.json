@@ -1,4 +1,14 @@
 {
-  "plugin_name": "example_plugin",
-  "plugin_class_name": "ExamplePlugin"
+  "readable_plugin_name": "Example Plugin",
+  "description": "",
+  "repository_url": "",
+  "author": "Learning Equality",
+  "email": "info@learningequality.org",
+  "current_year": "{% now 'utc', '%Y' %}",
+  "_extensions": ["jinja2_time.TimeExtension"],
+  "plugin_name": "kolibri_{{ cookiecutter.readable_plugin_name|lower|replace(' ', '_') }}",
+  "plugin_class_name": "{{ cookiecutter.readable_plugin_name|title|replace(' ', '') }}",
+  "frontend_plugin": ["Yes", "No"],
+  "has_own_page": ["Yes", "No"],
+  "content_renderer_plugin": ["Yes", "No"]
 }

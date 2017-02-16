@@ -7,21 +7,33 @@ Minimal [Cookiecutter](https://github.com/audreyr/cookiecutter) template for gen
 
   `$ pip install cookiecutter`
 
+* Install le-utils.
+
+  `$ pip install le-utils`
 
 * Generate a new Kolibri plugin within the directory of your choice.
 
   `$ cookiecutter https://github.com/learningequality/cookiecutter-kolibri-plugin`
 
-
-* Select a plugin name. 
+* Select a readable plugin name. 
   
-  Must be `lowercase_separated_by_underscores` (ie. `vector_video_player`).
+  e.g. `Vector Video Player`.
 
+* You will then be prompted to enter a description, a repository url, and author details.
 
-* Select a plugin Class name. 
+* If you would like to change the default pypi package name, you can modify it. 
+  
+  Must be `kolibri_lowercase_separated_by_underscores` (ie. `kolibri_vector_video_player`).
+
+* If you would like to change the default plugin Class name for the Javascript class, you can modify it. 
   
   Must be `UpperCamelCase.` (ie. `VectorVideoPlayer`).
 
+* Select if this is a frontend plugin (i.e. it will provide a Javascript module for frontend code)
+
+* Select if this plugin will have its own page within the Django app - if you are creating an extension of existing functionality in Kolibri, this will not be the case - such as a content renderer plugin.
+
+* Select if this plugin is a content renderer plugin, and what content kind and file extension it handles. If you are not creating a content renderer plugin, you may safely ignore these options.
 
 * Install the newly generated plugin in Kolibri.
 
@@ -36,4 +48,4 @@ Minimal [Cookiecutter](https://github.com/audreyr/cookiecutter) template for gen
 * Restart the Kolibri server.
 
 
-* You can test the plugin by visiting `http://127.0.0.1:8000/<plugin_name>`
+* If the plugin has its own page, you can test the plugin by visiting `http://127.0.0.1:8000/<plugin_name>`

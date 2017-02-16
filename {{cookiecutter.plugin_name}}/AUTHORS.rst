@@ -4,11 +4,9 @@ Credits
 Development Lead and Copyright Holder
 -------------------------------------
 
-* Learning Equality – info@learningequality.org
+* {{ cookiecutter.author }} – {{ cookiecutter.email }}
 
 Community
 ---------
 
 Please feel free to add your name on this list if you do a PR!
-
-* Firstname Lastname (your_github_account_name)

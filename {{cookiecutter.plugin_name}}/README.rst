@@ -1,19 +1,51 @@
-
+{% set is_frontend_plugin = cookiecutter.content_renderer_plugin == 'Yes' or cookiecutter.frontend_plugin == 'Yes' %}
 Kolibri External Plugin Template
 =================================
 
 
-How can I install external plugin in Kolibri?
------------------------------------------------
+How can I install this plugin?
+------------------------------
 
-Run the following commands in Kolibri to install this plugin:
+1. Inside your Kolibri virtual environment:
+    ``pip install {{ cookiecutter.plugin_name }}``
 
-``pip install -e <LOCAL_PATH_TO_THIS_PLUGIN_FOLDER>``
+2. Activate the plugin:
 
+    ``kolibri plugin {{ cookiecutter.plugin_name }} enable``
 
-``kolibri plugin {{cookiecutter.plugin_name}} enable``
+3. Restart Kolibri.
 
-If the plugin includes any libraries in package.json, run ``npm install`` in Kolibri
+How can I install this plugin for development?
+------------------------------
+
+1. Download this repo.
+
+2. Open terminal in your Kolibri repo.
+
+3. run the following commands:
+
+    ``pip install -e <LOCAL-PATH-TO-REPO>``
+
+    ``kolibri plugin {{ cookiecutter.plugin_name }} enable``
+
+{% if is_frontend_plugin %}
+4. Then run the commands to install frontend packages in Kolibri, this plugin will have its dependencies recursively installed.
+{% endif %}
+
+How to publish to PyPi?
+------------------------------
+
+1. Follow the instructions above to install the plugin for development.
+
+{% if is_frontend_plugin %}
+2. From the Kolibri directory run the frontend build command.
+{% endif %}
+
+{% if is_frontend_plugin %}3{% else %}2{% endif %}. Update `setup.py` to a newer version.
+
+{% if is_frontend_plugin %}4{% else %}3{% endif %}. In the terminal move to the root level of repo dir and run the following command to publish to PyPi:
+
+    ``make release``
 
 
 What is Kolibri?

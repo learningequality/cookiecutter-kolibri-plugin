@@ -19,6 +19,7 @@ def read_file(fname):
 
 dist_name = '{{cookiecutter.plugin_name}}'
 plugin_name = '{{cookiecutter.plugin_name}}'
+repo_url = '{{cookiecutter.repository_url}}'
 
 readme = read_file('README.rst')
 doclink = """
@@ -29,7 +30,7 @@ The full documentation is at."""
 
 # Default description of the distributed package
 description = (
-    """Template for building external Kolibri plugin"""
+    """{{cookiecutter.description}}"""
 )
 
 
@@ -61,7 +62,7 @@ setup(
     ),
     author='Learning Equality',
     author_email='info@learningequality.org',
-    url='https://github.com/66eli77/kolibri-plugin-template',
+    url=repo_url,
     packages=[
         str(plugin_name),  # https://github.com/pypa/setuptools/pull/597
     ],

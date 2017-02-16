@@ -1,7 +1,9 @@
 <template>
 
   <div>
-    <h1>{{cookiecutter.plugin_name}}</h1>
+    {% if cookiecutter.content_renderer_plugin != 'Yes' %}
+    <h1>{{cookiecutter.readable_plugin_name}}</h1>
+    {% endif %}
   </div>
 
 </template>
