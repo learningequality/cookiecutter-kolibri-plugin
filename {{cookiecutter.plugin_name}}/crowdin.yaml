@@ -1,0 +1,13 @@
+project_identifier: {{ plugin_name }}
+api_key: <insert API key here>
+base_path: .
+
+files:
+  - source: '/{{ plugin_name }}/locale/en/LC_FRONTEND_MESSAGES/*.json'
+    translation: '/{{ plugin_name }}/locale/%locale_with_underscore%/LC_FRONTEND_MESSAGES/%original_file_name%'
+
+  - source: '/{{ plugin_name }}/locale/en/LC_MESSAGES/*.po'
+    translation: '/{{ plugin_name }}/locale/%locale_with_underscore%/LC_MESSAGES/%original_file_name%'
+
+  - source: '/{{ plugin_name }}/locale/docs/en/LC_MESSAGES/*.po'
+    translation: '/{{ plugin_name }}/locale/docs/%locale_with_underscore%/LC_MESSAGES/%original_file_name%'
