@@ -53,6 +53,8 @@ if '{{ cookiecutter.has_own_page }}' != 'Yes':
         'hooks.py',
         ]:
         remove_file(file)
+    if '{{ cookiecutter.frontend_plugin }}' == 'Yes':
+        remove_folder('assets/src/state')
 
 if '{{ cookiecutter.content_renderer_plugin }}' == 'Yes':
     context = {

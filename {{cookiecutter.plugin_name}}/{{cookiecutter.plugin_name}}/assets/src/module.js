@@ -1,8 +1,7 @@
-const logging = require('kolibri.lib.logging').getLogger(__filename);
+import RootVue from './views';
 
-const RootVue = require('./vue');
 {% if cookiecutter.content_renderer_plugin == 'Yes' %}
-const ContentRendererModule = require('content_renderer_module');
+import ContentRendererModule from 'content_renderer_module';
 
 class {{cookiecutter.plugin_class_name}}Module extends ContentRendererModule {
   get rendererComponent() {
@@ -12,9 +11,35 @@ class {{cookiecutter.plugin_class_name}}Module extends ContentRendererModule {
     return '{{ '{{ content_kind }}' }}/{{ '{{ file_extension }}' }}';
   }
 }
+{% elif cookiecutter.has_own_page == 'Yes' %}
+import KolibriApp from 'kolibri_app';
+import { initialState, mutations } from './state/store';
+
+const routes = [];
+
+class {{cookiecutter.plugin_class_name}}Module extends KolibriApp {
+  get stateSetters() {
+    return [];
+  }
+  get routes() {
+    return routes;
+  }
+  get RootVue() {
+    return RootVue;
+  }
+  get initialState() {
+    return initialState;
+  }
+  get mutations() {
+    return mutations;
+  }
+}
 {% else %}
-const Vue = require('vue');
-const KolibriModule = require('kolibri_module');
+import logger from 'kolibri.lib.logging';
+import Vue from 'vue';
+import KolibriModule from 'kolibri_module';
+
+const logging = logger.getLogger(__filename);
 
 class {{cookiecutter.plugin_class_name}}Module extends KolibriModule {
   /*
@@ -36,4 +61,8 @@ class {{cookiecutter.plugin_class_name}}Module extends KolibriModule {
 }
 
 {% endif %}
-module.exports = new {{cookiecutter.plugin_class_name}}Module();
+{% set plugin_camelcase_name = cookiecutter.plugin_class_name|first|lower + cookiecutter.plugin_class_name[1:] %}
+
+const {{ plugin_camelcase_name }} = new {{cookiecutter.plugin_class_name}}Module();
+
+export { {{ plugin_camelcase_name }} as default };
