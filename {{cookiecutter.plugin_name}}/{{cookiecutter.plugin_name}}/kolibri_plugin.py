@@ -9,14 +9,14 @@ class {{cookiecutter.plugin_class_name}}(KolibriPluginBase):
         return urls
 
     def url_slug(self):
-        return "^{{cookiecutter.plugin_name}}"
+        return "^{{cookiecutter.plugin_name}}/"
 
 {% endif %}
 {% if cookiecutter.content_renderer_plugin == 'Yes' or cookiecutter.frontend_plugin == 'Yes' %}
 
 class {{ cookiecutter.plugin_class_name }}Asset(webpack_hooks.WebpackBundleHook):
     unique_slug = "{{ cookiecutter.plugin_name }}_module"
-    src_file = "assets/src/module.js"
+    src_file = "assets/src/{% if cookiecutter.has_own_page %}app{% else %}module{% endif %}.js"
     {% if cookiecutter.content_renderer_plugin == 'Yes' %}
     events = {
         "content_render:{{ '{{ content_kind }}' }}/{{ '{{ file_extension }}' }}": "render"
