@@ -11,7 +11,9 @@
 
 <script>
 
-  module.exports = {};
+  export default {
+    name: '{{cookiecutter.plugin_class_name}}Index'
+  };
 
 </script>
 

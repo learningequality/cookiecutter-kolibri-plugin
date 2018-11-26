@@ -54,7 +54,8 @@ if '{{ cookiecutter.has_own_page }}' != 'Yes':
         ]:
         remove_file(file)
     if '{{ cookiecutter.frontend_plugin }}' == 'Yes':
-        remove_folder('assets/src/state')
+        remove_folder('assets/src/modules')
+        remove_folder('assets/src/routes')
 
 if '{{ cookiecutter.content_renderer_plugin }}' == 'Yes':
     context = {
@@ -73,6 +74,10 @@ if '{{ cookiecutter.content_renderer_plugin }}' == 'Yes':
     env.loader = FileSystemLoader('/')
     render_file('kolibri_plugin.py', context, env)
     render_file('assets/src/module.js', context, env)
+    render_file('content_types.json', context, env)
+else:
+    remove_file('content_types.json')
+
 
 if '{{ cookiecutter.has_own_page }}' == 'Yes' and '{{ cookiecutter.frontend_plugin }}' == 'Yes':
     shutil.move(location('assets/src/module.js'), location('assets/src/app.js'))
