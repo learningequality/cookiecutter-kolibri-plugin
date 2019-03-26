@@ -1,0 +1,10 @@
+{
+  "kinds": [
+    {
+    "name": "{{ '{{ content_kind }}' }}",
+    "extensions": [
+        "{{ '{{ file_extension }}' }}"
+      ]
+    }
+  ]
+}
