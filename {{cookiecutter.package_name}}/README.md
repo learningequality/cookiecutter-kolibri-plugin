@@ -57,7 +57,7 @@ yarn run build
 ```
 {% endif %}
 
-Update `setup.py` to a newer version. Move to the root of the plugin directory and run:
+Update _setup.py_ to a newer version. From the root of the plugin directory run:
 
 ```bash
 make release

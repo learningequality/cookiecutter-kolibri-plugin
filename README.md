@@ -1,6 +1,6 @@
 # Cookiecutter Kolibri Plugin
 
-This is a minimal [Cookiecutter](https://github.com/audreyr/cookiecutter) template for generating [Kolibri](https://github.com/learningequality/kolibri) plugins.
+This is a [Cookiecutter](https://github.com/audreyr/cookiecutter) template for generating minimal Kolibri plugins. [Read more about the plugin architecture here](https://kolibri-dev.readthedocs.io/en/develop/backend_architecture/plugins.html).
 
 ## Setup
 
@@ -18,10 +18,10 @@ If the plugin will be a separate repo, after running `cookiecutter` you will `cd
 
 ## Generate code
 
-Change the place where you want a new project directory created. Run `cookiecutter` with this repo as an argument to start the process:
+In a terminal, `cd` to the place where you want a new project directory created. Run `cookiecutter` with this repo as an argument to start the process:
 
 ```bash
-cookiecutter https://github.com/learningequality/cookiecutter-kolibri-plugin`
+cookiecutter https://github.com/learningequality/cookiecutter-kolibri-theme-plugin`
 ```
 
 Cookiecutter will give some prompts:
