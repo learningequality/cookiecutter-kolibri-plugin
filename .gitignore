@@ -28,11 +28,14 @@ pip-log.txt
 # Translations
 *.mo
 
+# Virtual environemnt
+.venv
+Pipfile
+
 # Mr Developer
 .mr.developer.cfg
 .project
 .pydevproject
-.venv
 .idea
 
 # Complexity
