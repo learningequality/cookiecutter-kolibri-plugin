@@ -10,13 +10,15 @@ You do not need to clone this repo to use the template. Instead, first enable yo
 pip install cookiecutter le-utils black sh --upgrade
 ```
 
-If the plugin is going to be added to the Kolibri repo, make a new directory for it under `kolibri/plugins` in the Kolibri repo.
+The `cookiecutter` command will create a new top-level project directory in the location where you run the command, as well as a Python module subdirectory. You should run it outside of any existing git repo.
 
-If not, make a new project directory for it outside of the Kolibri repo. In this case you may also want to first create a new empty repo on GitHub.com. These are generally named like `kolibri-[PLUGIN-NAME]-plugin`, for example [kolibri-oidc-provider-plugin](https://github.com/learningequality/kolibri-oidc-provider-plugin).
+If the plugin is going to be added to the Kolibri repo, after running `cookiecutter` you will copy the Python module subdirectory to `kolibri/plugins` in the Kolibri repo.
+
+If the plugin will be a separate repo, after running `cookiecutter` you will `cd` into it and initialize a new git repo with `git init`. In this case you may also want to first create a new empty repo on GitHub.com. These are generally named like `kolibri-[PLUGIN-NAME]-plugin`, for example [kolibri-oidc-provider-plugin](https://github.com/learningequality/kolibri-oidc-provider-plugin).
 
 ## Generate code
 
-Change to the newly-created plugin directory. Run `cookiecutter` with this repo as an argument to start the process:
+Change the place where you want a new project directory created. Run `cookiecutter` with this repo as an argument to start the process:
 
 ```bash
 cookiecutter https://github.com/learningequality/cookiecutter-kolibri-plugin`
