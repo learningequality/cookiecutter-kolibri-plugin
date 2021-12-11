@@ -4,6 +4,7 @@ import shutil
 from cookiecutter.environment import StrictEnvironment
 from le_utils.constants import content_kinds
 from cookiecutter.generate import FileSystemLoader
+import sh
 
 plugin_name = "{{ cookiecutter.plugin_name }}"
 
@@ -98,3 +99,6 @@ if (
     and "{{ cookiecutter.frontend_plugin }}" == "Yes"
 ):
     shutil.move(location("assets/src/module.js"), location("assets/src/app.js"))
+
+
+sh.black(PROJECT_DIRECTORY)

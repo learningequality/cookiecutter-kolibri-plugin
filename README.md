@@ -7,7 +7,7 @@ This is a minimal [Cookiecutter](https://github.com/audreyr/cookiecutter) templa
 You do not need to clone this repo to use the template. Instead, first enable your Kolibri Python virtual environment and install these dependencies in it:
 
 ```bash
-pip install cookiecutter le-utils --upgrade
+pip install cookiecutter le-utils black sh --upgrade
 ```
 
 If the plugin is going to be added to the Kolibri repo, make a new directory for it under `kolibri/plugins` in the Kolibri repo.
