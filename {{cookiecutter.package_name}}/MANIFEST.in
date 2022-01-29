@@ -1,9 +1,4 @@
-include AUTHORS.rst
-include CONTRIBUTING.rst
-include CHANGELOG.rst
 include LICENSE
-include README.rst
-include requirements.txt
 recursive-exclude {{cookiecutter.plugin_name}}/* *pyc
 recursive-include {{cookiecutter.plugin_name}}/static *.*
 {% if cookiecutter.content_renderer_plugin == 'Yes' or cookiecutter.frontend_plugin == 'Yes' %}

@@ -1,0 +1,16 @@
+# Packages
+*.egg-info
+
+# Virtual environments
+.venv
+Pipfile
+
+# Node
+node_modules
+
+# Webpack build files
+**/build/*
+**/static/*
+
+# Mac Finder files
+.DS_Store
